@@ -1,11 +1,15 @@
 package controllers;
 
+import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
+import java.util.Locale;
+import java.util.ResourceBundle;
+import utilities.I18N;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,11 +23,20 @@ import javafx.stage.StageStyle;
 import repositories.DatabaseConnection;
 import repositories.DatabaseHandler;
 
-public class loginController {
-
+public class loginController implements Initializable{
+	Locale locale = new Locale("en");
+	
+	ResourceBundle resources = ResourceBundle.getBundle("resources.messages", locale);
+	
+    @FXML
+    private Button albButton;
+    
     @FXML
     private Button cancelButton;
-
+	
+    @FXML
+    private Button engButton = I18N.buttonForKey("button.en");
+    
     @FXML
     private Button loginButton;
 
@@ -35,13 +48,23 @@ public class loginController {
 
     @FXML
     private TextField usernameTextField;
-
+    
+    @FXML
+    void albButtonOnAction(ActionEvent event) {
+    	switchLanguage(new Locale("en"));
+   }
+    
     @FXML
     void cancelButtonOnAction(ActionEvent event) {
     	   Stage stage = (Stage) cancelButton.getScene().getWindow();
            stage.close();
        }
 
+    @FXML
+    void engButtonOnAction(ActionEvent event) {
+    	switchLanguage(new Locale("de"));
+   }
+    
     @FXML
     void loginButtonOnAction(ActionEvent event) {
     	   if(!usernameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
@@ -73,8 +96,20 @@ public class loginController {
                    ex.printStackTrace();
                }
            } else {
-               loginMessageLabel.setText("Please enter username and password.");
+				 loginMessageLabel.setText("Please enter username and password.");
+				
+        	  
            }
        }
+    
+    private void switchLanguage(Locale locale) {
+        I18N.setLocale(locale);
+    }
 
+	@Override
+	public void initialize(URL url, ResourceBundle arg) {
+		// TODO Auto-generated method stub
+		loginMessageLabel.setText(resources.getString("welcome"));
+		I18N.buttonForKey("button.en");
+	}
 }

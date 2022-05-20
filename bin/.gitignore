@@ -1,2 +1,5 @@
-/application/
-/views/
+/module-info.class
+/controllers/
+/models/
+/repositories/
+/utilities/
