@@ -49,38 +49,7 @@ public class issuedBooksController implements Initializable{
     
     ObservableList<IssuedBook> list = FXCollections.observableArrayList();
 
-  /*  
-    public static class IssuedBook{
-        private final SimpleStringProperty bookId;
-        private final SimpleStringProperty memberId;
-        private final SimpleIntegerProperty renew;
-        private final SimpleStringProperty TimeCol;
-
-        public IssuedBook(String bookId, String memberId, String TimeCol,Integer renew) {
-            this.bookId = new SimpleStringProperty(bookId);
-            this.memberId = new SimpleStringProperty(memberId);
-            this.TimeCol = new SimpleStringProperty(TimeCol);
-            this.renew = new SimpleIntegerProperty(renew);
-
-        }
-        public String getBookId() {
-            return bookId.get();
-        }
-
-        public String getMemberId() {
-            return memberId.get();
-        }
-
-        public Integer getRenew() {
-            return renew.get();
-        }
-
-        public String getIssueTime() {
-            return TimeCol.get();
-        }      
-    }*/
-    
-    
+   
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initCol();
         loadData();
@@ -117,11 +86,11 @@ public class issuedBooksController implements Initializable{
     }
     
     
-    void loadWindow(String loc, String title) {
+  /*  void loadWindow(String loc, String title) {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource(loc));
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+   */ 
 }

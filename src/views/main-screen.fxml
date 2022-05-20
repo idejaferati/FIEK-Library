@@ -19,12 +19,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
-    <BorderPane prefHeight="565.0" prefWidth="778.0" styleClass="borderPane" stylesheets="@../resources/styles/main-screenStyles.css">
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <BorderPane prefHeight="565.0" prefWidth="778.0" styleClass="borderPane" >
         <top>
-            <MenuBar prefHeight="37.0" prefWidth="700.0" style="-fx-background-color: #dcdcf2;" styleClass="menuBar" stylesheets="@../resources/styles/main-screenStyles.css" BorderPane.alignment="CENTER">
+            <MenuBar prefHeight="37.0" prefWidth="700.0" style="-fx-background-color: #dcdcf2;" styleClass="menuBar"  BorderPane.alignment="CENTER">
                 <Menu text="_File">
                     <accelerator>
                         <KeyCodeCombination alt="DOWN" code="F" control="UP" meta="UP" shift="UP" shortcut="UP" />
@@ -89,44 +90,44 @@
         </top>
         <right>
             <VBox prefHeight="556.0" prefWidth="139.0" spacing="10.0" style="-fx-background-color: #dcdcf2;" BorderPane.alignment="CENTER">
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddMember" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="Add Member">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddMember" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons"  text="Add Member" textFill="WHITE">
                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="49.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-y: 5;">
                             <Image url="@../images/add-member.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddBook" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="Add Book ">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddBook" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons"  text="Add Book " textFill="WHITE">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/add-member.png" />
+                        <Image url="@../images/add-book.png" />
                      </image>
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewMembers" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="View Members">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewMembers" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" text="View Members" textFill="WHITE">
                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="42.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                             <Image url="@../images/members-list.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewBooks" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="View Books">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewBooks" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" text="View Books" textFill="WHITE">
                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="38.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                             <Image url="@../images/view-books.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewIssuedBooks" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="View Issued Books ">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewIssuedBooks" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons"  text="View Issued Books " textFill="#fafafa">
                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                             <Image url="@../images/issued-books.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" layoutX="10.0" layoutY="460.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="129.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="Log Out">
+                <Button contentDisplay="TOP" layoutX="10.0" layoutY="460.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="129.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" text="Log Out" textFill="#fcfcfc">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                             <Image url="@../images/logout.png" />
@@ -136,7 +137,7 @@
             </VBox>
         </right>
         <center>
-            <TabPane prefHeight="460.0" prefWidth="671.0" style="-fx-background-color: #dcdcf2;" styleClass="tab" stylesheets="@../resources/styles/main-screenStyles.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <TabPane prefHeight="460.0" prefWidth="671.0" style="-fx-background-color: #dcdcf2;" styleClass="tab" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
                 <Tab fx:id="BookIssueTab" style="-fx-background-color: #dcdcf2; -fx-border-color: #ceceeb;" text="Issue Book">
                     <AnchorPane prefHeight="200.0" prefWidth="200.0">
                         <HBox fx:id="book_info" alignment="CENTER" prefHeight="203.0" prefWidth="759.0" AnchorPane.bottomAnchor="303.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -144,7 +145,7 @@
                                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                             </padding>
                             <VBox alignment="CENTER" prefHeight="163.0" prefWidth="270.0">
-                                <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="57.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-y: -10;">
                                     <Image url="@../images/search-book.png" />
                                 </ImageView>
                                 <TextField fx:id="bookIdInput" alignment="CENTER" onAction="#loadBookInfo" prefHeight="40.0" prefWidth="227.0" promptText="Enter Book ID">
@@ -155,7 +156,10 @@
                             </VBox>
                             <StackPane fx:id="bookInfoContainer">
                                 <VBox alignment="CENTER" prefHeight="163.0" prefWidth="495.0">
-                                    <Text fx:id="bookName" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name:" visible="false" />
+                                    <Text fx:id="bookName" fill="#0634bf" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name:" visible="false">
+                              <font>
+                                 <Font size="19.0" />
+                              </font></Text>
                                     <Text fx:id="authorName" layoutX="104.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author:" visible="false">
                                         <VBox.margin>
                                             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -170,7 +174,7 @@
                                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                             </padding>
                             <VBox alignment="CENTER" prefHeight="163.0" prefWidth="270.0">
-                                <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="61.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-y: -10;">
                                     <Image url="@../images/search-user.png" />
                                 </ImageView>
                                 <TextField fx:id="memberIdInput" alignment="CENTER" onAction="#loadMemberInfo" prefHeight="40.0" prefWidth="149.0" promptText="Enter Member ID">
@@ -190,8 +194,8 @@
                                 </VBox>
                             </StackPane>
                         </HBox>
-                        <HBox alignment="CENTER" layoutY="411.0" prefHeight="95.0" prefWidth="759.0" spacing="50.0" style="-fx-background-color: #dcdcf2;" styleClass="bottomHBOX" stylesheets="@../resources/styles/main-screenStyles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="411.0">
-                            <Button mnemonicParsing="false" onAction="#issueHandler" prefHeight="37.0" prefWidth="241.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Issue" textFill="WHITE">
+                        <HBox alignment="CENTER" layoutY="411.0" prefHeight="95.0" prefWidth="759.0" spacing="50.0" style="-fx-background-color: #dcdcf2;" styleClass="bottomHBOX"  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="411.0">
+                            <Button mnemonicParsing="false" onAction="#issueHandler" prefHeight="37.0" prefWidth="241.0" style="-fx-background-color: #263F73;" styleClass="setup-button"  text="Issue" textFill="WHITE">
                                 <effect>
                                     <Glow />
                                 </effect>
@@ -199,7 +203,7 @@
                            <Insets right="10.0" />
                         </HBox.margin>
                             </Button>
-                     <Button layoutX="339.0" layoutY="39.0" mnemonicParsing="false" onAction="#refreshGraphs" prefHeight="37.0" prefWidth="233.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Refresh Graphs" textFill="WHITE">
+                     <Button layoutX="339.0" layoutY="39.0" mnemonicParsing="false" onAction="#refreshGraphs" prefHeight="37.0" prefWidth="233.0" style="-fx-background-color: #263F73;" styleClass="setup-button" text="Refresh Graphs" textFill="WHITE">
                         <effect>
                            <Glow />
                         </effect>
@@ -253,7 +257,7 @@
                            <children>
                               <VBox>
                                  <children>
-                                    <Button mnemonicParsing="false" onAction="#loadBookInfo2" prefHeight="20.0" prefWidth="182.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="View Information" textAlignment="CENTER" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#loadBookInfo2" prefHeight="20.0" prefWidth="182.0" style="-fx-background-color: #263F73;" styleClass="setup-button"  text="View Information" textAlignment="CENTER" textFill="WHITE">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -281,9 +285,9 @@
                               </TableView>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutY="411.0" prefHeight="99.0" prefWidth="759.0" style="-fx-background-color: #dcdcf2;" styleClass="bottomHBOX" stylesheets="@../resources/styles/main-screenStyles.css" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="411.0">
+                        <HBox alignment="CENTER" layoutY="411.0" prefHeight="99.0" prefWidth="759.0" style="-fx-background-color: #dcdcf2;"  AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="411.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#loadRenewOp" prefHeight="37.0" prefWidth="182.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Renew" textFill="WHITE">
+                              <Button mnemonicParsing="false" onAction="#loadRenewOp" prefHeight="37.0" prefWidth="182.0" style="-fx-background-color: #263F73;" styleClass="setup-button"  text="Renew" textFill="WHITE">
                                  <effect>
                                     <Glow />
                                  </effect>
@@ -291,7 +295,7 @@
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button layoutX="339.0" layoutY="39.0" mnemonicParsing="false" onAction="#loadOnSubmissionOp" prefHeight="37.0" prefWidth="186.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Submission " textAlignment="CENTER" textFill="WHITE">
+                              <Button layoutX="339.0" layoutY="39.0" mnemonicParsing="false" onAction="#loadOnSubmissionOp" prefHeight="37.0" prefWidth="186.0" style="-fx-background-color: #263F73;" styleClass="setup-button"  text="Submission " textAlignment="CENTER" textFill="WHITE">
                                  <effect>
                                     <Glow />
                                  </effect>

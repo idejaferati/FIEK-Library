@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import models.Book;
+import processors.addBookProcessor;
 // import controllers.booklistController;
 import repositories.DatabaseHandler;
 import controllers.booklistController;
@@ -53,7 +54,7 @@ System.out.println("Cacnled");
 Stage stage = (Stage) saveBtn.getScene().getWindow();
 stage.close();
 }    
-    public static boolean onlyDigits(String str, int n) {
+   /* public static boolean onlyDigits(String str, int n) {
         for (int i = 1; i < n; i++) {
 
             if (Character.isDigit(str.charAt(i))) {
@@ -64,7 +65,7 @@ stage.close();
         }
         return false;
     }
-
+*/
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		databaseHandler = new DatabaseHandler();
@@ -78,7 +79,7 @@ stage.close();
 	        quantity.setText("");
 	        check.setSelected(false);
 	    }
-	  
+	  addBookProcessor count = new addBookProcessor();
 	  @FXML
 	    void saveAction(ActionEvent event) {
 	    	System.out.println("noo go away"); 
@@ -87,7 +88,7 @@ stage.close();
 	        String bookAuthor = author.getText();
 	        String bookPublisher = publisher.getText();
 	        String bookQuantity = quantity.getText();
-	        boolean onlyDigits = onlyDigits(bookId, bookId.length());
+	        boolean onlyDigits = count.onlyDigits(bookId, bookId.length());
 
 	        if(isInEditMode){
 	          handleEditOperation();

@@ -26,9 +26,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
          <stylesheets>
-            <URL value="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/addmember.css" />
-            <URL value="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/addmember.css" />
-         </stylesheets>
+          </stylesheets>
          <contextMenu>
             <ContextMenu>
                <items>
@@ -42,7 +40,7 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" style="-fx-background-color: #dcdcf2;" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/addmember.css">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" style="-fx-background-color: #dcdcf2;" >
                <children>
                   <Button fx:id="addNewBtn" mnemonicParsing="false" onAction="#addNewBook" prefHeight="37.0" prefWidth="233.0" style="-fx-background-color: #263F73;" styleClass="viewMemberBtn" text="Add New" textFill="WHITE">
                      <HBox.margin>
