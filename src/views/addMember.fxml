@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" prefHeight="404.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.addMemberController">
+<AnchorPane fx:id="rootPane" prefHeight="404.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.addMemberController">
    <children>
-      <VBox layoutX="42.0" layoutY="23.0" prefHeight="450.0" prefWidth="521.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox layoutX="42.0" layoutY="23.0" prefHeight="450.0" prefWidth="521.0" style="-fx-background-color: #dcdcf2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <TextField fx:id="memberID" promptText="MemberID " styleClass="mtextfield" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/addmember.css">
                <VBox.margin>
@@ -78,14 +78,14 @@
                   </CheckBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="510.0">
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="512.0">
                <children>
-                  <Button fx:id="saveButton" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#saveButton" prefHeight="100.0" prefWidth="229.0" styleClass="addMemberBtn" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/addmember.css" text="Save">
+                  <Button fx:id="saveButton" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#saveButton" prefHeight="100.0" prefWidth="229.0" style="-fx-background-color: #263F73;" styleClass="addMemberBtn" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/addmember.css" text="Save" textFill="WHITE">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButton" prefHeight="60.0" prefWidth="237.0" styleClass="addMemberBtn" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/addmember.css" text="Cancel">
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButton" prefHeight="60.0" prefWidth="237.0" style="-fx-background-color: #263F73;" styleClass="addMemberBtn" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/addmember.css" text="Cancel" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>

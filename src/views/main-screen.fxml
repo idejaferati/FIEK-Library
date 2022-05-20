@@ -21,10 +21,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
     <BorderPane prefHeight="565.0" prefWidth="778.0" styleClass="borderPane" stylesheets="@../resources/styles/main-screenStyles.css">
         <top>
-            <MenuBar prefHeight="37.0" prefWidth="700.0" styleClass="menuBar" stylesheets="@../resources/styles/main-screenStyles.css" BorderPane.alignment="CENTER">
+            <MenuBar prefHeight="37.0" prefWidth="700.0" style="-fx-background-color: #dcdcf2;" styleClass="menuBar" stylesheets="@../resources/styles/main-screenStyles.css" BorderPane.alignment="CENTER">
                 <Menu text="_File">
                     <accelerator>
                         <KeyCodeCombination alt="DOWN" code="F" control="UP" meta="UP" shift="UP" shortcut="UP" />
@@ -88,15 +88,15 @@
             </MenuBar>
         </top>
         <right>
-            <VBox prefHeight="556.0" prefWidth="139.0" BorderPane.alignment="CENTER">
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddMember" prefHeight="130.0" prefWidth="139.0" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="Add Member">
+            <VBox prefHeight="556.0" prefWidth="139.0" spacing="10.0" style="-fx-background-color: #dcdcf2;" BorderPane.alignment="CENTER">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddMember" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="Add Member">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                             <Image url="@../images/add-member.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddBook" prefHeight="130.0" prefWidth="139.0" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="Add Book ">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddBook" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="Add Book ">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -105,28 +105,28 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewMembers" prefHeight="130.0" prefWidth="139.0" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="View Members">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewMembers" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="View Members">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                             <Image url="@../images/members-list.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewBooks" prefHeight="130.0" prefWidth="139.0" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="View Books">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewBooks" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="View Books">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                             <Image url="@../images/view-books.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewIssuedBooks" prefHeight="130.0" prefWidth="139.0" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="View Issued Books ">
+                <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadViewIssuedBooks" prefHeight="130.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="View Issued Books ">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                             <Image url="@../images/issued-books.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button contentDisplay="TOP" layoutX="10.0" layoutY="460.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="129.0" prefWidth="139.0" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="Log Out">
+                <Button contentDisplay="TOP" layoutX="10.0" layoutY="460.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="129.0" prefWidth="139.0" style="-fx-background-color: #6370bf;" styleClass="side-buttons" stylesheets="@../resources/styles/main-screenStyles.css" text="Log Out">
                     <graphic>
                         <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                             <Image url="@../images/logout.png" />
@@ -136,8 +136,8 @@
             </VBox>
         </right>
         <center>
-            <TabPane prefHeight="460.0" prefWidth="671.0" styleClass="tab" stylesheets="@../resources/styles/main-screenStyles.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-                <Tab fx:id="BookIssueTab" text="Issue Book">
+            <TabPane prefHeight="460.0" prefWidth="671.0" style="-fx-background-color: #dcdcf2;" styleClass="tab" stylesheets="@../resources/styles/main-screenStyles.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                <Tab fx:id="BookIssueTab" style="-fx-background-color: #dcdcf2; -fx-border-color: #ceceeb;" text="Issue Book">
                     <AnchorPane prefHeight="200.0" prefWidth="200.0">
                         <HBox fx:id="book_info" alignment="CENTER" prefHeight="203.0" prefWidth="759.0" AnchorPane.bottomAnchor="303.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <padding>
@@ -147,7 +147,7 @@
                                 <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                                     <Image url="@../images/search-book.png" />
                                 </ImageView>
-                                <TextField fx:id="bookIdInput" alignment="CENTER" onAction="#loadBookInfo" prefHeight="40.0" prefWidth="238.0" promptText="Enter Book ID">
+                                <TextField fx:id="bookIdInput" alignment="CENTER" onAction="#loadBookInfo" prefHeight="40.0" prefWidth="227.0" promptText="Enter Book ID">
                                     <VBox.margin>
                                         <Insets right="20.0" />
                                     </VBox.margin>
@@ -190,8 +190,8 @@
                                 </VBox>
                             </StackPane>
                         </HBox>
-                        <HBox alignment="CENTER" layoutY="411.0" prefHeight="95.0" prefWidth="759.0" styleClass="bottomHBOX" stylesheets="@../resources/styles/main-screenStyles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="411.0">
-                            <Button mnemonicParsing="false" onAction="#issueHandler" prefHeight="37.0" prefWidth="136.0" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Issue">
+                        <HBox alignment="CENTER" layoutY="411.0" prefHeight="95.0" prefWidth="759.0" spacing="50.0" style="-fx-background-color: #dcdcf2;" styleClass="bottomHBOX" stylesheets="@../resources/styles/main-screenStyles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="411.0">
+                            <Button mnemonicParsing="false" onAction="#issueHandler" prefHeight="37.0" prefWidth="241.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Issue" textFill="WHITE">
                                 <effect>
                                     <Glow />
                                 </effect>
@@ -199,7 +199,7 @@
                            <Insets right="10.0" />
                         </HBox.margin>
                             </Button>
-                     <Button layoutX="339.0" layoutY="39.0" mnemonicParsing="false" onAction="#refreshGraphs" prefHeight="37.0" prefWidth="142.0" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Refresh Graphs">
+                     <Button layoutX="339.0" layoutY="39.0" mnemonicParsing="false" onAction="#refreshGraphs" prefHeight="37.0" prefWidth="233.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Refresh Graphs" textFill="WHITE">
                         <effect>
                            <Glow />
                         </effect>
@@ -210,7 +210,7 @@
                         </HBox>
                     </AnchorPane>
                 </Tab>
-            <Tab fx:id="BookIssueTab1" text="Renew/Submission">
+            <Tab fx:id="BookIssueTab1" style="-fx-background-color: #dcdcf2; -fx-border-color: #ceceeb;" text="Renew/Submission">
                <content>
                   <AnchorPane prefHeight="485.0" prefWidth="761.0">
                      <children>
@@ -253,7 +253,7 @@
                            <children>
                               <VBox>
                                  <children>
-                                    <Button mnemonicParsing="false" onAction="#loadBookInfo2" prefHeight="20.0" prefWidth="182.0" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="View Information">
+                                    <Button mnemonicParsing="false" onAction="#loadBookInfo2" prefHeight="20.0" prefWidth="182.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="View Information" textAlignment="CENTER" textFill="WHITE">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -264,16 +264,16 @@
                         </HBox>
                         <HBox layoutX="-3.0" layoutY="178.0" prefHeight="233.0" prefWidth="770.0">
                            <children>
-                              <TableView fx:id="tableView" prefHeight="233.0" prefWidth="769.0">
+                              <TableView fx:id="tableView" prefHeight="233.0" prefWidth="769.0" style="-fx-background-color: #dcdcf2;">
                                 <columns>
-                                  <TableColumn fx:id="issueDateColumn" prefWidth="103.0" text="Issue Date" />
-                                  <TableColumn fx:id="renewColumn" prefWidth="112.0" text="Renew Count" />
-                                    <TableColumn fx:id="bidColumn" text="Book ID" />
-                                    <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Title" />
-                                    <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Author" />
-                                    <TableColumn fx:id="idColumn" prefWidth="75.0" text="Member ID" />
-                                    <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
-                                    <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
+                                  <TableColumn fx:id="issueDateColumn" prefWidth="103.0" style="-fx-background-color: #dcdcf2;" text="Issue Date" />
+                                  <TableColumn fx:id="renewColumn" prefWidth="112.0" style="-fx-background-color: #dcdcf2;" text="Renew Count" />
+                                    <TableColumn fx:id="bidColumn" style="-fx-background-color: #dcdcf2;" text="Book ID" />
+                                    <TableColumn fx:id="titleColumn" prefWidth="75.0" style="-fx-background-color: #dcdcf2;" text="Title" />
+                                    <TableColumn fx:id="authorColumn" prefWidth="75.0" style="-fx-background-color: #dcdcf2;" text="Author" />
+                                    <TableColumn fx:id="idColumn" prefWidth="75.0" style="-fx-background-color: #dcdcf2;" text="Member ID" />
+                                    <TableColumn fx:id="nameColumn" prefWidth="75.0" style="-fx-background-color: #dcdcf2;" text="Name" />
+                                    <TableColumn fx:id="emailColumn" prefWidth="75.0" style="-fx-background-color: #dcdcf2;" text="Email" />
                                 </columns>
                                  <columnResizePolicy>
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -281,9 +281,9 @@
                               </TableView>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutY="411.0" prefHeight="99.0" prefWidth="759.0" styleClass="bottomHBOX" stylesheets="@../resources/styles/main-screenStyles.css" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="411.0">
+                        <HBox alignment="CENTER" layoutY="411.0" prefHeight="99.0" prefWidth="759.0" style="-fx-background-color: #dcdcf2;" styleClass="bottomHBOX" stylesheets="@../resources/styles/main-screenStyles.css" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="411.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#loadRenewOp" prefHeight="37.0" prefWidth="182.0" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Renew">
+                              <Button mnemonicParsing="false" onAction="#loadRenewOp" prefHeight="37.0" prefWidth="182.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Renew" textFill="WHITE">
                                  <effect>
                                     <Glow />
                                  </effect>
@@ -291,7 +291,7 @@
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button layoutX="339.0" layoutY="39.0" mnemonicParsing="false" onAction="#loadOnSubmissionOp" prefHeight="37.0" prefWidth="186.0" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Submission " textAlignment="CENTER">
+                              <Button layoutX="339.0" layoutY="39.0" mnemonicParsing="false" onAction="#loadOnSubmissionOp" prefHeight="37.0" prefWidth="186.0" style="-fx-background-color: #263F73;" styleClass="setup-button" stylesheets="@../resources/styles/main-screenStyles.css" text="Submission " textAlignment="CENTER" textFill="WHITE">
                                  <effect>
                                     <Glow />
                                  </effect>

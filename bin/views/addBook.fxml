@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.addBookController">
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.addBookController">
    <children>
-      <VBox layoutX="10.0" layoutY="10.0" prefHeight="428.0" prefWidth="511.0">
+      <VBox layoutX="-4.0" layoutY="-1.0" prefHeight="437.0" prefWidth="523.0" style="-fx-background-color: #dcdcf2;">
          <children>
             <TextField fx:id="title" promptText="Book Title" styleClass="addBookField" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/main-screenStyles.css">
                <VBox.margin>
@@ -77,14 +77,14 @@
                   <Insets />
                </VBox.margin>
             </HBox>
-            <HBox prefHeight="128.0" prefWidth="511.0">
+            <HBox prefHeight="35.0" prefWidth="523.0">
                <children>
-                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveAction" prefHeight="62.0" prefWidth="309.0" styleClass="addBookButtons" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/main-screenStyles.css" text="Save">
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveAction" prefHeight="62.0" prefWidth="309.0" style="-fx-background-color: #263F73;" styleClass="addBookButtons" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/main-screenStyles.css" text="Save" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="10.0" right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancelAction" prefHeight="60.0" prefWidth="309.0" styleClass="addBookButtons" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/main-screenStyles.css" text="Cancel">
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancelAction" prefHeight="60.0" prefWidth="309.0" style="-fx-background-color: #263F73;" styleClass="addBookButtons" stylesheets="@../../../../Desktop/sources/Library-Management-System-KNK-master/src/sample/resources/styles/main-screenStyles.css" text="Cancel" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="10.0" right="10.0" />
                      </HBox.margin>
