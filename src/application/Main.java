@@ -1,5 +1,7 @@
 package application;
 	
+import java.util.Locale;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,6 +10,9 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
+	public Locale locale = new Locale("en_US");
+	public static String lang = "en_US";
+	
 	@Override
 	public void start(Stage primaryStage) {
 		 try {

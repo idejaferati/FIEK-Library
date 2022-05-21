@@ -3,7 +3,9 @@ package controllers;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,10 +21,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import repositories.DatabaseConnection;
 import repositories.DatabaseHandler;
-import utilities.I18N;
 
+import utilities.loginProperties;
 public class loginController {
-	Locale locale = new Locale("en");
+	Locale locale = new Locale("en_US");
     @FXML
     private Button cancelButton;
 
@@ -31,12 +33,27 @@ public class loginController {
 
     @FXML
     private Label loginMessageLabel;
+    @FXML
+    private Label loginPass;
+    @FXML
+    private Label loginTitle;
+
+    @FXML
+    private Label loginUsername;
+
+    @FXML
+    private Label logintext;
+    @FXML
+    private Label lBtnLabel;
+    @FXML
+    private Label lgbbtncancelLabel;
 
     @FXML
     private PasswordField passwordPasswordField;
 
     @FXML
     private TextField usernameTextField;
+    
 
     @FXML
     void cancelButtonOnAction(ActionEvent event) {
@@ -57,7 +74,15 @@ public class loginController {
                    while(queryResult.next()) {
                        if(queryResult.getInt(1) == 1) {
                            //loginMessageLabel.setText("Welcome!");
-                           Parent parent = FXMLLoader.load(getClass().getResource("/views/main-screen.fxml"));
+                    	   
+                    	   
+                    	   
+                    	   
+                    	   
+                    	   
+                    	   ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+                    	   
+                           Parent parent = FXMLLoader.load(getClass().getResource("/views/main-screen.fxml"),bundle);
                            Scene scene = new Scene(parent);
                            Stage primaryStage=new Stage();
                            primaryStage.initStyle(StageStyle.DECORATED);
@@ -78,20 +103,29 @@ public class loginController {
                loginMessageLabel.setText("Please enter username and password.");
            }
        }
+    
+
+    loginProperties LangProperties = new loginProperties();
+    
     @FXML
     void setLanEng(ActionEvent event) {
-    	System.out.println("hello");
-    	switchLanguage(new Locale("en"));
-    	
+    	LangProperties.setLanEngc(loginTitle,logintext, loginUsername, loginPass, lBtnLabel, lgbbtncancelLabel); 
+    	locale = new Locale("en_US");
+    	System.out.println("English set as Main language");
     }
 
     @FXML
     void setLandAlb(ActionEvent event) {
-    	System.out.println("pershendetje");
-    	switchLanguage(new Locale("de"));
-    }
-    private void switchLanguage(Locale locale) {
-        I18N.setLocale(locale);
-    }
+    	LangProperties.setLanAlbc(loginTitle,logintext, loginUsername, loginPass, lBtnLabel, lgbbtncancelLabel);
+    	locale = new Locale("Al_AL");
+    	System.out.println("Shqipja si gjuhe kryesore");
+    	try {
+			Main.lang = "Al_AL";
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	}
+  
 
 }

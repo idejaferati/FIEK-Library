@@ -8,11 +8,13 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import application.Main;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -21,11 +23,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -48,6 +52,7 @@ public class MainController implements Initializable {
 	ObservableList<Issue> issueData = FXCollections.observableArrayList();
 	 DatabaseHandler databaseHandler;
 	 boolean isReadyForSubmission = false;
+	  Locale locale = new Locale(Main.lang);
 
 	 PieChart bookChart;
 	 PieChart memberChart;
@@ -137,12 +142,35 @@ public class MainController implements Initializable {
 
     @FXML
     void handleAddBook(ActionEvent event) {
-    	   loadWindow("/views/addBook.fxml", "Add Book");
+    	ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+    	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/addBook.fxml"),bundle);
+            Parent root2 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root2));  
+            stage.show();
+        } catch(Exception e) {
+            System.out.println("Could not load");
+        }
+    	  // loadWindow("/views/addBook.fxml", "Add Book");
     }
-
+  
+   
     @FXML
     void handleAddMember(ActionEvent event) {
-    	 loadWindow("/views/viewMembers.fxml", "View Members");
+    	ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+  	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/addMember.fxml"),bundle);
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        } catch(Exception e) {
+            System.out.println("Could not load Add Member");
+        }
+    	// loadWindow("/views/viewMembers.fxml", "View Members");
     }
 
     @FXML
@@ -158,17 +186,53 @@ public class MainController implements Initializable {
 
     @FXML
     void handleViewBooks(ActionEvent event) {
-    	 loadWindow("/views/booklist.fxml", "View Books");
+    	ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+   	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/booklist.fxml"),bundle);
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        } catch(Exception e) {
+            System.out.println("Could not load Add Member");
+        }
+    	// loadWindow("/views/booklist.fxml", "View Books");
     }
 
     @FXML
     void handleViewIssuedBooks(ActionEvent event) {
-    	 loadWindow("/views/issuedBooks.fxml", "View Issued Books");
+    	ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+  	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/issuedBooks.fxml"),bundle);
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        } catch(Exception e) {
+            System.out.println("Could not load Add Member");
+        }
+    	
+    	// loadWindow("/views/issuedBooks.fxml", "View Issued Books");
     }
 
     @FXML
     void handleViewMembers(ActionEvent event) {
-    	loadWindow("/views/viewMembers.fxml", "View Members");
+    	
+    	
+    	ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+   	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/viewMembers.fxml"),bundle);
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        } catch(Exception e) {
+            System.out.println("Could not load Add Member");
+        }
+    //	loadWindow("/views/viewMembers.fxml", "View Members");
     }
 
     @FXML
@@ -541,27 +605,84 @@ System.out.println("Eshte duke punuar");
     // Loading the corresponding windows when buttons are clicked
     @FXML
     private void loadAddMember(javafx.event.ActionEvent actionEvent) {
-        loadWindow("/views/addMember.fxml", "Add Member");
+    	ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+   	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/addMember.fxml"),bundle);
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        } catch(Exception e) {
+            System.out.println("Could not load Add Member");
+        }
+        //loadWindow("/views/addMember.fxml", "Add Member");
     }
 
     @FXML
     private void loadAddBook(javafx.event.ActionEvent actionEvent) {
-        loadWindow("/views/addBook.fxml", "Add Book");
+       // loadWindow("/views/addBook.fxml", "Add Book");
+        
+        ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+    	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/addBook.fxml"),bundle);
+            Parent root2 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root2));  
+            stage.show();
+        } catch(Exception e) {
+        	e.printStackTrace();
+            System.out.println("Could not load Add Member");
+        }
     }
 
     @FXML
     private void loadViewMembers(javafx.event.ActionEvent actionEvent) {
-        loadWindow("/views/viewMembers.fxml", "Members List");
+    	ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+   	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/viewMembers.fxml"),bundle);
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        } catch(Exception e) {
+            System.out.println("Could not load Add Member");
+        }
+       // loadWindow("/views/viewMembers.fxml", "Members List");
     }
 
     @FXML
     private void loadViewBooks(javafx.event.ActionEvent actionEvent) {
-        loadWindow("/views/booklist.fxml", "Book list");
+    	ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+    	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/booklist.fxml"),bundle);
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        } catch(Exception e) {
+            System.out.println("Could not load Add Member");
+        }
+       // loadWindow("/views/booklist.fxml", "Book list");
     }
 
     @FXML
     private void loadViewIssuedBooks(javafx.event.ActionEvent actionEvent) {
-        loadWindow("/views/issuedBooks.fxml", "Issued Books");
+    	ResourceBundle bundle = ResourceBundle.getBundle("resources.labelText",locale);
+ 	   
+    	try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/issuedBooks.fxml"),bundle);
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+        } catch(Exception e) {
+            System.out.println("Could not load Add Member");
+        }
+      //  loadWindow("/views/issuedBooks.fxml", "Issued Books");
     }
 
     // A method for loading windows
@@ -580,61 +701,7 @@ System.out.println("Eshte duke punuar");
         }
     }
 
-    // Issue Class
- /*   public static class Issue {
-        private final SimpleStringProperty memberID;
-        private final SimpleStringProperty name;
-        private final SimpleStringProperty email;
-        private final SimpleStringProperty bookID;
-        private final SimpleStringProperty title;
-        private final SimpleStringProperty author;
-        private final SimpleStringProperty issueTime;
-        private final SimpleIntegerProperty renew_count;
-
-
-        public Issue(String issueTime, Integer renew_count, String bookID, String title, String author, String memberID, String name, String email) {
-            this.memberID = new SimpleStringProperty(memberID);
-            this.name = new SimpleStringProperty(name);
-            this.email = new SimpleStringProperty(email);
-            this.bookID = new SimpleStringProperty(bookID);
-            this.title = new SimpleStringProperty(title);
-            this.author = new SimpleStringProperty(author);
-            this.issueTime = new SimpleStringProperty(issueTime);
-            this.renew_count = new SimpleIntegerProperty(renew_count);
-        }
-
-        public String getMemberID() {
-            return memberID.get();
-        }
-
-        public String getName() {
-            return name.get();
-        }
-
-        public String getEmail() {
-            return email.get();
-        }
-
-        public String getBookID() {
-            return bookID.get();
-        }
-
-        public String getTitle() {
-            return title.get();
-        }
-
-        public String getAuthor() {
-            return author.get();
-        }
-
-        public String getIssueTime() {
-            return issueTime.get();
-        }
-
-        public Integer getRenew_count() {
-            return renew_count.get();
-        }
-    } */
+  
     private void clearIssueEntries() {
         bookIdInput.clear();
         memberIdInput.clear();
@@ -718,5 +785,9 @@ System.out.println("Eshte duke punuar");
         memberChart.setData(databaseHandler.getMemberGraphicStatistics());
     }
     
-
+  
+    @FXML
+    void setLangAlb(ActionEvent event) throws IOException {
+    	
+    }    
 }
